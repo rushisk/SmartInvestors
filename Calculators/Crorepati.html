@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.journey2wealth.in/Calculators/Crorepati.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 May 2018 04:26:59 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.css" type="text/css" />
+<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="js/jquery.mobile-1.4.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+function Calculate()
+
+{
+ if(document.getElementById('benefits').style.display=='none') { 
+            document.getElementById('benefits').style.display='block'; 
+			
+        } 
+        	
+if(document.getElementById('hide').style.display=='block') {	
+	
+document.getElementById('hide').style.display='none';
+
+}
+
+
+
+
+var SIP = document.getElementById("SIP").value;
+var Returnn = document.getElementById("Return").value;
+var Years = document.getElementById("Years").value;
+var PV = document.getElementById("PV").value;
+var convertmonthly;
+convertmonthly = Number(Returnn/12);
+var Return = Number(convertmonthly/100);
+var Power = Math.pow((1+Return),Years*12);
+var fvexisting;
+fvexisting = PV*Power;
+var crorepati;
+crorepati = 10000000-(fvexisting);
+
+var crorepatiSIP;
+crorepatiSIP = Math.round([(crorepati * Return)/(Power-1)]*(1+Return));
+var FV;
+FV = [Math.round((Number(SIP)*[(Number(Power)-1)/Return])*(1+Return))];
+var PVA;
+PVA = Math.round(Number(PV)*Power);
+var Total;
+Total =[Number(FV)+Number(PVA)];
+document.getElementById('v1-five').innerHTML=Total;
+document.getElementById('years_display').innerHTML=Years;
+document.getElementById('years1_display').innerHTML=Years;
+document.getElementById('years2_display').innerHTML=Years;
+document.getElementById('PV_display').innerHTML=PV.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+document.getElementById('SIP_display').innerHTML=SIP.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+document.getElementById('Return_display').innerHTML=Returnn;
+document.getElementById('NewSIP').innerHTML=crorepatiSIP;
+
+drawChart(crorepati,fvexisting);
+}
+
+google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart(crorepati,fvexisting) 
+	  {
+		  
+		
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Shortfall',     parseInt(crorepati)],
+          ['Existing Savings',      parseInt(fvexisting)],
+        
+        ]);
+		
+		
+
+        var options = {
+          title: 'Your Result'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+
+
+
+function defaultpage() 
+{
+ if(document.getElementById('benefits').style.display=='block') { 
+            document.getElementById('benefits').style.display='none'; 
+			
+        } 
+        	
+if(document.getElementById('hide').style.display=='none') {	
+	
+document.getElementById('hide').style.display='block';
+
+}	
+	
+	
+	}
+
+ 
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="hide" style="display:block;">
+
+<table width="700">
+<tr>
+<td width="208" valign="bottom">
+<label for="slider-fill">In how many years do you wish to become a crorepati? (years)</label></td>
+<td width="480">
+<input type="range" name="slider-fill" id="Years" value="10" min="1" max="100" step="1" data-highlight="true">
+</td></tr>
+
+<tr>
+<td width="208" valign="bottom"><label for="slider-fill">What are your current savings? (&#8377;)</label></td>
+<td width="480">
+<input type="range" name="slider-fill" id="PV" value="200000" min="100000" max="1000000" step="10000" data-highlight="true">
+</td></tr>
+
+
+<tr>
+<td width="208" valign="bottom"><label for="slider-fill">How much do you plan to save monthly? (&#8377;)</label></td>
+<td width="480">
+<input type="range" name="slider-fill" id="SIP" value="2000" min="1000" max="100000" step="1000" data-highlight="true">
+</td></tr>
+
+<tr>
+<td width="208" valign="bottom"><label for="slider-fill">Expected Interest Rate on your savings (%)</label></td>
+<td width="480">
+<input type="range" name="slider-fill" id="Return" value="8" min="1" max="100" step="1" data-highlight="true">
+</td></tr>
+
+
+<tr>
+<td colspan="1">
+<div class="button" onclick="Calculate()">Calculate</div>
+</td>
+<td colspan="1"></td>
+</tr>
+</table>
+</div>
+
+
+
+<div id="benefits" style="display:none;">
+<table>
+<tr>
+<td width="200">Total Number Of Years To Become Crorepati</td>
+<td width="100">: <span id="years_display"></span> Years</td>
+<td rowspan="5"><div id="piechart" style="width: 100%; height: 100%;"></div></td>
+</tr>
+<tr>
+<td colspan="2">
+<hr color="#C1C1C1" />
+</td></tr>
+<tr>
+<td>Current savings:</td>
+<td>: &#8377; <span id="PV_display"></span></td>
+</tr>
+<tr>
+<td colspan="2">
+<hr color="#C1C1C1" />
+</td></tr>
+<tr>
+<td>Monthly savings planned:</td>
+<td>: &#8377; <span id="SIP_display"></span></td>
+</tr>
+<tr>
+<td colspan="2">
+<hr color="#C1C1C1" />
+</td></tr>
+<tr>
+<td>Expected Interest Rate:</td>
+<td>: <span id="Return_display"></span> %</td>
+</tr>
+<tr>
+<td colspan="2">
+<hr color="#C1C1C1" />
+</td></tr>
+<tr>
+<td colspan="3">After <b><span id="years1_display"></span></b> years, you will have earned
+
+&#8377; <span style="color:#06F; font-size:22px; font-weight:bold;" id="v1-five"> </span></td>
+
+</tr>
+<tr>
+<td colspan="3">To meet your target of becoming a crorepati in <b><span id="years2_display"></span></b> years, you need to start saving &#8377; <b><span id="NewSIP"></span></b> every month.</td>
+
+</tr>
+<tr>
+<td><div class="button" onclick="defaultpage()">Back</div></td>
+</tr>
+</table>
+</div>
+
+
+
+
+</body>
+
+<!-- Mirrored from www.journey2wealth.in/Calculators/Crorepati.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 May 2018 04:26:59 GMT -->
+</html>
