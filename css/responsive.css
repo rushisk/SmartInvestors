@@ -9,6 +9,7 @@
 		color: #bbb;
 		font-size: 2em;
 	}
+  .space-medium { padding-top: 60px; padding-bottom: 60px; }
 
 	.quote-buttons span {
 		margin: 0 2px;
@@ -46,7 +47,8 @@
 	.classic-testimonials {
 		margin-bottom: 25px!important;
 	}
-	
+	  .space-medium { padding-top: 50px; padding-bottom: 50px; }
+
 	.tp-caption a.btn-system {
 		font-size: 11px;
 		padding: 4px 8px;
@@ -192,7 +194,8 @@
     .tp-caption a.btn-system {
 		display: none;
 	}
-	
+	  .space-medium { padding-top: 50px; padding-bottom: 50px; }
+
 	.history-box img {
 		float: none;
 		width: 100%;
@@ -239,7 +242,8 @@
 	.navbar-default .navbar-nav {
 		padding: 15px 0;
 	}
-	
+	  .space-medium { padding-top: 30px; padding-bottom: 30px; }
+
 	.show-search, .search-form {
 		display: none;
 	}
@@ -503,10 +507,10 @@ ul.social-list {
     display: none;
   }
 }
-@media (max-width: 480px)
-@media screen and (max-width: 480px)
+@media screen and (max-width: 480px){
 .navbar-brand {
     position: absolute;
     top: -15px;
     left: 20px;
+}
 }

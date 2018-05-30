@@ -5857,3 +5857,31 @@ ul.footer-nav li a:hover {
     background: -ms-linear-gradient(-90deg, #82c650 0%, #44b872 100%);
     background: linear-gradient(-90deg, #82c650 0%, #44b872 100%);
 }
+
+/*--------------------------
+ 10.2  Client Reviews 
+ ------------------------------*/
+.testimonial-block { border: 1px solid #eaeaed; padding: 30px;}
+.testimonial-section { }
+.testimonial-title { }
+.testimonial-content { }
+.testimonial-text { margin-bottom: 30px; font-size: 20px; color: #193446; line-height: 30px; font-style: italic; }
+.testimonial-meta { position: relative; }
+.testi-meta-name { margin-bottom: 5px; font-size: 14px; text-transform: uppercase; }
+.testi-rating { font-size: 12px; color: #fecc2f; }
+.testimonial-quote { position: absolute; right: 43px; bottom: 15px; font-size: 45px; color: #e0e0e4; }
+.testimonial-carousel .owl-theme .owl-nav { line-height: 1; text-align: center; -webkit-tap-highlight-color: transparent; }
+.testimonial-carousel .owl-theme .owl-nav .owl-prev { position: absolute; top: 36%; left: -57px; color: #e5e6e9; font-size: 35px; margin: 12px; padding: 0px; background: transparent; display: inline-block; cursor: pointer; border-radius: 2px; height: 0px; width: 0px; }
+.testimonial-carousel .owl-theme .owl-nav .owl-next { position: absolute; top: 36%; right: -10px; color: #e5e6e9; font-size: 35px; margin: 12px; padding: 0px; background: transparent; display: inline-block; cursor: pointer; border-radius: 2px; height: 0px; width: 0px; }
+.testimonial-carousel .owl-theme .owl-nav .owl-prev:hover { background-color: transparent; text-decoration: none; color: #304496; }
+.testimonial-carousel .owl-theme .owl-nav .owl-next:hover { background-color: transparent; text-decoration: none; color: #304496; }
+.section-title { margin-bottom: 30px; text-align: center; }
+.section-title h2 { margin-bottom: 8px;}
+.salm { font-size: 30px; color:  #F05E23; }
+/*Note: Section space help to create top bottom space;*/
+
+.space-small { padding-top: 30px; padding-bottom: 30px; }
+.space-medium { padding-top: 25px; padding-bottom: 25px; }
+.space-large { padding-top: 120px; padding-bottom: 120px; }
+.space-ex-large { padding-top: 140px; padding-bottom: 140px; }
+
