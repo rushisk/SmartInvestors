@@ -120,6 +120,22 @@ p strong {
 .Address{
 	text-align: center;
 }
+.card {
+  text-align:center;
+   margin-right: 40%;
+  margin-left: 20%;
+  width: 200px;
+  height: auto;
+  background: white;
+ box-shadow: 0px 0px 0px grey;
+  -webkit-transition:  box-shadow .6s ease-out;
+     box-shadow: .8px .9px 3px grey;
+
+}
+.card:hover{ 
+     box-shadow: 1px 8px 20px grey;
+    -webkit-transition:  box-shadow .6s ease-in;
+  }
 .accent-color-bg {
 	color: #fff;
 }
