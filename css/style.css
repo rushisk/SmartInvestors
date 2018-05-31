@@ -104,8 +104,18 @@ p strong {
 	font-weight: 600;
 }
 
+.certificate{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .record{
 	background-color: #c83349;
+	list-style: none;
+}
+
+.year{
+	text-align: center;
 }
 
 .accent-color-bg {
