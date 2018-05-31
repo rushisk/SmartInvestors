@@ -117,7 +117,9 @@ p strong {
 .year{
 	text-align: center;
 }
-
+.Address{
+	text-align: center;
+}
 .accent-color-bg {
 	color: #fff;
 }
