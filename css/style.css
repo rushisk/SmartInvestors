@@ -104,6 +104,10 @@ p strong {
 	font-weight: 600;
 }
 
+.record{
+	background-color: #c83349;
+}
+
 .accent-color-bg {
 	color: #fff;
 }
