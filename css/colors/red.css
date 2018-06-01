@@ -11,7 +11,7 @@ a {
 }
 
 .top-bar a:hover {
-	color: #49c0ea;
+	color: #7bd4cc;
 	padding-left: 0px !important;
 	margin:0px !important;
 	font-weight:400;
@@ -47,7 +47,7 @@ a.main-button, input[type="submit"] {
 }
 .navbar-default .navbar-nav > li:hover > a,
 .navbar-default .navbar-nav > li > a.active {
-	color: #2ac4ea;
+	color: #F05E23;
 }
 
 .dropdown > li:hover > a, .sup-dropdown li:hover > a {
