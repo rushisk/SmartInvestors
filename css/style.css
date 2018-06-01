@@ -1,13 +1,5 @@
 /* CSS Document */
 
-/*
-	Theme Name: Margo
-	Description: Margo - Responsive Template
-	Version: 1.0
-	Author: iThemesLab
-	Website: http://ithemeslab.com
-*/
-
 /* ------------------------------------------ */
 /*             TABLE OF CONTENTS
 /* ------------------------------------------ */
@@ -72,6 +64,7 @@ a:hover {
 
 a, a:hover {
     text-decoration: none;
+    	color: #F05E23;
 }
 
 i {
@@ -127,6 +120,12 @@ p strong {
   margin-left: 20%;
   width: 205px;
   height: auto;
+}
+
+
+.card img{
+	    max-width: 100%;
+    height: 200px;
 }
 
 .accent-color-bg {
@@ -2918,7 +2917,7 @@ ul.icons-list li i {
 }
 .service-content h3{
 	font-size: 28px;
-    color: #00ccff;
+    color: #F05E23;
     font-weight: 500;
     text-transform: capitalize;
 	padding-bottom: 17px;
