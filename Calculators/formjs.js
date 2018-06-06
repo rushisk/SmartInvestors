@@ -1,10 +1,4 @@
- /**
-*
-*  UTF-8 data encode / decode
-*  http://www.webtoolkit.info/
-*
-**/
- 
+
 var Utf8 = {
  
 	// public method for url encoding
