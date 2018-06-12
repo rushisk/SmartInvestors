@@ -39,17 +39,7 @@
 
   <!-- Color CSS Styles  -->
   <link rel="stylesheet" type="text/css" href="css/colors/red.css" title="red" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/jade.css" title="jade" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/green.css" title="green" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/blue.css" title="blue" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/beige.css" title="beige" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/cyan.css" title="cyan" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/orange.css" title="orange" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/peach.css" title="peach" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/pink.css" title="pink" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/purple.css" title="purple" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/sky-blue.css" title="sky-blue" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/colors/yellow.css" title="yellow" media="screen" />
+ 
   <link rel="icon" href="images/logo16.html" type="image/gif">
   
   <!-- planning tools css -->
@@ -330,9 +320,26 @@
 
           <!--Sidebar-->
           <div class="col-md-3 sidebar right-sidebar">
-		  <h4>ENQUIRY FORM</h4>
-            <!-- Search Widget -->
-            <p> <iframe id="JotFormIFrame-72512266421449" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="https://form.jotform.me/72512266421449" frameborder="0" style="width: 1px; min-width: 100%; height:768px; border:none;" scrolling="no"> </iframe> <script type="text/javascript"> var ifr = document.getElementById("JotFormIFrame-72512266421449"); if(window.location.href && window.location.href.indexOf("?") > -1) { var get = window.location.href.substr(window.location.href.indexOf("?") + 1); if(ifr && get.length > 0) { var src = ifr.src; src = src.indexOf("?") > -1 ? src + "&" + get : src + "?" + get; ifr.src = src; } } window.handleIFrameMessage = function(e) { var args = e.data.split(":"); if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[2]); } else { iframe = document.getElementById("JotFormIFrame"); } if (!iframe) return; switch (args[0]) { case "scrollIntoView": iframe.scrollIntoView(); break; case "setHeight": iframe.style.height = args[1] + "px"; break; case "collapseErrorPage": if (iframe.clientHeight > window.innerHeight) { iframe.style.height = window.innerHeight + "px"; } break; case "reloadPage": window.location.reload(); break; } var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false; if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) { var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)}; iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*"); } }; if (window.addEventListener) { window.addEventListener("message", handleIFrameMessage, false); } else if (window.attachEvent) { window.attachEvent("onmessage", handleIFrameMessage); } </script></p>
+		 <div class="containe">  
+  <form id="contact" action="" method="post">
+    <h3>Quick Contact</h3>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" id="uname" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" id="umail" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" id="unumber" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" id="umsg" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" onclick="mails()" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form> 
+</div>
         </div>
       </div>
     </div>
