@@ -331,8 +331,8 @@ Goal based investing differs from traditional investing methodologies, where fin
 
           <!--Sidebar-->
           <div class="col-md-3 sidebar right-sidebar">
-		 <div class="containe">  
-  <form id="contact" action="" method="post">
+		 <div class="containe" id="contact">  
+ 
     <h3>Quick Contact</h3>
     <fieldset>
       <input placeholder="Your name" type="text" tabindex="1" id="uname" required autofocus>
@@ -347,9 +347,9 @@ Goal based investing differs from traditional investing methodologies, where fin
       <textarea placeholder="Type your Message Here...." tabindex="5" id="umsg" required></textarea>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" onclick="mails()" data-submit="...Sending">Submit</button>
+      <input type="button" class="btn btn-danger" value="submit" onClick="mails()">
     </fieldset>
-  </form> 
+ 
 </div>
         </div>
       </div>
